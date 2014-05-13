@@ -91,7 +91,7 @@ def mode(array)
       counted.push(item)
     end
   end
-  max_value = frequency.max_by{|v| v[1]}[1]
+  max_value = frequency.max_by{ |v| v[1] }[1]
   result = []
   frequency.each { |arr| result << arr[0] if arr[1] >= max_value }
   result
