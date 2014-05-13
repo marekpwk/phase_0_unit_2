@@ -30,6 +30,17 @@ def new_groups(array)
 end
 
 # 4. Refactored Solution
+def new_groups(array)
+ new_group = []
+ array.shuffle.each_slice(4){|acc| new_group << acc}
+ # if last group is less than three
+  if new_group.length > 1 && new_group.last.length <= 2
+      last_group = new_group.pop
+      new_group.first.push(last_group.pop)
+      new_group.first.push(last_group.pop) if last_group.length == 1
+  end
+ new_group
+end
 
 
 
