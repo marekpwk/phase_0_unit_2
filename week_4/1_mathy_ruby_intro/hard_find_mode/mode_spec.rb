@@ -13,7 +13,7 @@ describe 'mode' do
     method(:mode).arity.should eq 1
   end
 
-  it "returns the correct mode when mode is a unique integer" do
+  it "returns the correct mod e when mode is a unique integer" do
     mode(array_1).should eq [5]
   end
 
