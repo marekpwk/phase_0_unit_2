@@ -30,27 +30,27 @@
 # END IF
 # RETURN new_string
 # 2. Initial Solution
-# def separate_comma(number)
-#   number_string = number.to_s.split("")
-#   new_string = ""
-#   if number_string.length < 4
-#     return number_string.join
-#   else
-#     sub_str = ""
-#     number_string.reverse_each do |digit|
-#       sub_str  = digit + sub_str
-#       if sub_str.length == 3
-#         new_string = "," + sub_str + new_string
-#         sub_str = ""
-#       end
-#     end
-#     new_string = sub_str << new_string
-#     if new_string[0] == ","
-#       new_string = new_string[1..-1]
-#     end
-#   end
-#   new_string
-# end
+def separate_comma(number)
+  number_string = number.to_s.split("")
+  new_string = ""
+  if number_string.length < 4
+    return number_string.join
+  else
+    sub_str = ""
+    number_string.reverse_each do |digit|
+      sub_str  = digit + sub_str
+      if sub_str.length == 3
+        new_string = "," + sub_str + new_string
+        sub_str = ""
+      end
+    end
+    new_string = sub_str << new_string
+    if new_string[0] == ","
+      new_string = new_string[1..-1]
+    end
+  end
+  new_string
+end
 
 
 # 3. Refactored Solution
