@@ -58,6 +58,7 @@ def my_hash_deletion_method(source, thing_to_delete)
 end
 
 # Identify and describe the ruby method you implemented.
+
 # I've use delete_if method, which takes the block, and deletes element when block evaluates to true.
 # Second method I've used is to_s which converst an element to a string
 # Third method I've used is include? which returns true  if string contains the given string or character
@@ -72,7 +73,7 @@ p my_array_modification_method(i_want_pets, 1) == ["I", "want", 4, "pets", "but"
 p my_hash_modification_method(my_family_pets_ages, 2) == {"Evi" => 8, "Hoobie" => 5, "George" => 14, "Bogart" => 6, "Poly" => 6, "Annabelle" => 2, "Ditto" => 5}
 p my_array_sorting_method(i_want_pets) == ["3", "4", "I", "but", "have", "only", "pets", "want"]
 p my_hash_sorting_method(my_family_pets_ages) == [["Annabelle", 2], ["Ditto", 5], ["Hoobie", 5], ["Bogart", 6], ["Poly", 6], ["Evi", 8], ["George", 14]]
-This may be false depending on how your method deals with ordering the animals with the same ages.
+# This may be false depending on how your method deals with ordering the animals with the same ages.
 p my_array_deletion_method(i_want_pets, "a") == ["I", 4, "pets", "but", "I", "only", 3 ]
 p my_hash_deletion_method(my_family_pets_ages, "George") == {"Evi" => 8, "Hoobie" => 5, "Bogart" => 6, "Poly" => 6, "Annabelle" => 2, "Ditto" => 5}
 
