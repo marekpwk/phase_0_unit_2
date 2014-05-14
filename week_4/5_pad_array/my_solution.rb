@@ -69,7 +69,22 @@ end
 
 
 # 3. Refactored Solution
+class Array
 
+  def pad!(number, option=nil)
+    self.length >= number ? self : (number - self.length).times { self << option }
+    self
+  end
 
+  def pad(number, option=nil)
+    new_array = Array.new(self)
+    new_array.length >= number ? new_array : (number - new_array.length).times { new_array << option }
+    new_array
+  end
+
+end
+a = [1,2]
+puts a.pad(7,"apple").inspect
+puts a.pad!(17,"apple").inspect
 
 # 4. Reflection
