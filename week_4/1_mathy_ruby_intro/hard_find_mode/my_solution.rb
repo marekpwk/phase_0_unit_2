@@ -86,7 +86,7 @@ def mode(array)
   frequency = {}
   array.each { |item| frequency[item] = array.count(item)  if !frequency.has_key?(item) }
   max_value = frequency.max_by { |hash_value| hash_value[1] }[1]
-  result = frequency.each_with_object([]) { |arr, new_arr| new_arr << arr[0] if arr[1] >= max_value }
+  result = frequency.each_with_object([]) { |arr, new_arr| new_arr << arr[0] if arr[1] == max_value }
 end
 
 puts mode([4, 4, 5, 5, 6, 6, 6, 7, 5])
