@@ -52,34 +52,34 @@
   # END LOOP
 
 # 2. Initial Solution
-# def mode(array)
-#   frequency = {}
-#   array.each do |item|
-#     if frequency.has_key?(item)
-#       frequency[item] = frequency[item] + 1
-#     else
-#       frequency[item] = 1
-#     end
-#   end
+def mode(array)
+  frequency = {}
+  array.each do |item|
+    if frequency.has_key?(item)
+      frequency[item] = frequency[item] + 1
+    else
+      frequency[item] = 1
+    end
+  end
 
-# max_value = 0
-# frequency.each_value do |value|
-#   if value > max_value
-#     max_value = value
-#   end
-# end
-# max = []
-# max_key = ""
-# max_freqency = []
-# frequency.each do |key, value|
-#   if value >= max_value
-#     max_value = value
-#     max_key = key
-#     max_freqency << max_key
-#   end
-# end
-# max_freqency
-# end
+max_value = 0
+frequency.each_value do |value|
+  if value > max_value
+    max_value = value
+  end
+end
+max = []
+max_key = ""
+max_freqency = []
+frequency.each do |key, value|
+  if value >= max_value
+    max_value = value
+    max_key = key
+    max_freqency << max_key
+  end
+end
+max_freqency
+end
 
 # 3. Refactored Solution
 def mode(array)
@@ -100,3 +100,4 @@ end
 
 
 # 4. Reflection
+
