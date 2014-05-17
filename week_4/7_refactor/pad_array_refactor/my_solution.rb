@@ -24,8 +24,21 @@
 
 
 # 4. My refactored solution:
+class Array
+ def pad!(number, option=nil)
+    self.length >= number ? self : self.fill(option,self.length, number - self.length)
+  end
+
+  def pad(number, option=nil)
+    new_array = Array.new(self)
+    new_array.length >= number ? new_array : new_array.fill(option,self.length, number - self.length)
+  end
+
+end
+
+a = [1,2]
 
 
-
-
+puts a.pad(7,"apple").inspect
+puts a.pad!(17,"apple").inspect
 # 5. Reflection
