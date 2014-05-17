@@ -33,10 +33,11 @@ end
 def new_groups(array)
   group_new = []
   array.shuffle.each_slice(4) { |mini_group| group_new << mini_group }
-  if  array.length % 4 != 0 && array.length % 4 < 3
+  if (array.length % 4).between?(1,2)
       group_last = group_new.pop
       if group_new.length >= 2
-           group_last.length.times { |i| group_new[i] << group_last[i] }
+        group_new[0].push(group_last[0])
+        group_new[1].push(group_last[1])
       else
         group_new[0].concat(group_last)
       end
@@ -55,6 +56,6 @@ puts new_groups(["a","b","c","d","e"])[0].length == 5       #returns true if len
 # 5. Reflection
 
 
-
-array = ["a", "b", "c", "d", "e"]
+''
+array = ["a", "b", "c", "d", "e","f","g", "h", "i", "k"]
 puts new_groups(array).inspect
