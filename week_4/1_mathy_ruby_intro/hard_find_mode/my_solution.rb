@@ -83,21 +83,10 @@ end
 
 # 3. Refactored Solution
 def mode(array)
-  frequency = []
-  counted = []
-  array.each do |item|
-    if !counted.include?(item)
-      frequency.push([item, array.count(item)])
-      counted.push(item)
-    end
-  end
-  max_value = frequency.max_by{ |v| v[1] }[1]
-  result = []
-  frequency.each { |arr| result << arr[0] if arr[1] >= max_value }
-  result
+  frequency = {}
+  array.each { |item| frequency[item] = array.count(item)  if !frequency.has_key?(item) }
+  max_value = frequency.max_by { |hash_value| hash_value[1] }[1]
+  result = frequency.each_with_object([]) { |arr, new_arr| new_arr << arr[0] if arr[1] >= max_value }
 end
 
-
-
-# 4. Reflection
-
+puts mode([4, 4, 5, 5, 6, 6, 6, 7, 5])

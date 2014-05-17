@@ -82,6 +82,7 @@ class Array
     new_array
   end
 
+
 end
 a = [1,2]
 puts a.pad(7,"apple").inspect
