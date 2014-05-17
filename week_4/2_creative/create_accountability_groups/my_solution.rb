@@ -1,7 +1,7 @@
 # U2.W4: Create Accountability Groups
 
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge [ with: Angela Kosek].
 
 # 2. Pseudocode
 
@@ -31,17 +31,18 @@ end
 
 # 4. Refactored Solution
 def new_groups(array)
- new_group = []
- array.shuffle.each_slice(4){|acc| new_group << acc}
- # if last group is less than three
-  if new_group.length > 1 && new_group.last.length <= 2
-      last_group = new_group.pop
-      new_group.first.push(last_group.pop)
-      new_group.first.push(last_group.pop) if last_group.length == 1
+  group_new = []
+  array.shuffle.each_slice(4) { |mini_group| group_new << mini_group }
+  if  array.length % 4 != 0 && array.length % 4 < 3
+      group_last = group_new.pop
+      if group_new.length >= 2
+           group_last.length.times { |i| group_new[i] << group_last[i] }
+      else
+        group_new[0].concat(group_last)
+      end
   end
- new_group
+  group_new
 end
-
 
 
 # 1. DRIVER TESTS GO BELOW THIS LINE
@@ -54,3 +55,6 @@ puts new_groups(["a","b","c","d","e"])[0].length == 5       #returns true if len
 # 5. Reflection
 
 
+
+array = ["a", "b", "c", "d", "e"]
+puts new_groups(array).inspect
