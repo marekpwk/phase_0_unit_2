@@ -58,7 +58,7 @@ def separate_comma(number)
   number_array = number.to_s.split("")
   sliced_array = []
   formatted_number = ""
-  number_array.reverse.each_slice(3){|numbers| sliced_array << numbers}
+  number_array.reverse.each_slice(3){ |numbers| sliced_array << numbers }
   sliced_array.reverse.each_with_index do |numbers, index|
     index == sliced_array.length - 1 ? formatted_number << numbers.reverse.join : formatted_number << numbers.reverse.join << ","
   end
@@ -67,3 +67,5 @@ end
 
 
 # 4. Reflection
+
+puts separate_comma(1000)
