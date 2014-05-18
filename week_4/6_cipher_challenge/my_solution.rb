@@ -135,3 +135,8 @@ p north_korean_cipher("ribx^wxst:$wsyxl%osvie,$xlir$neter,#xlir%xli%asvph!") == 
 p north_korean_cipher("ger^wsqifshc*nywx^kix^qi&10000*fekw@sj$gssp%vergl@hsvmxsw?") == "can somebody just get me 100 bags of cool ranch doritos?"
 
 
+# Reflections
+# When we started on this challenge , I was confused about how the code worked, but my partner did a really good job explaining it to me.
+#  We came up with a couple of really good ideas, but the part I liked the best was refactoring .  We cleaned up the code ,
+#   made it more elegant and faster, and used Regular Expression, which I think is good to be familiar with.
+# While I reviewed the code of others , I found one solution, which was using #zip method , which I never used before. I saw it in documentation , but I never bothered to read more about it, which obviously was a mistake.

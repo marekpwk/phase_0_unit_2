@@ -42,3 +42,6 @@ a = [1,2]
 puts a.pad(7,"apple").inspect
 puts a.pad!(17,"apple").inspect
 # 5. Reflection
+# When I attempted this assignment, I was pretty sure  that I wouldn't be able to improve my code. After spending  quite a bit of time working on it,
+#  I found the method I could use after browsing Array documentation, Array#fill.  I also noticed that I don't need my return statements.
+#    I enjoy refactoring, but on the other hand I find this very exhausting.

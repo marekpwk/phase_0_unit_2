@@ -68,4 +68,9 @@ end
 
 # 4. Reflection
 
-puts separate_comma(1000)
+# During this assignment  I discovered another interesting method, which is  #reverse_each.
+# It iterates through an array starting from the end. It is basically the same as using reverse.each which I have used before,
+# but I also found out that #reverse_each is much faster than reverse.each , so I'm going to use this one instead, from now on.
+# Solving the problem wasn't difficult, but making it an elegant was, and unfortunately in my opinion there is still some refactoring to be done there,
+# but so far I couldn't come up with anything better.
+

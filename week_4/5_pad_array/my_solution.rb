@@ -89,3 +89,6 @@ puts a.pad(7,"apple").inspect
 puts a.pad!(17,"apple").inspect
 
 # 4. Reflection
+
+# In this assignment  we had to add a method to a class. I have done it before during some other Ruby challenges , so it was pretty straightforward.
+# I spent the most time during  this exercise on refactoring  and although at this point I'm pretty happy with it, I think it still can be improved.

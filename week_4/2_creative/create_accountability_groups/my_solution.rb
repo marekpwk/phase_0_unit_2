@@ -54,8 +54,5 @@ puts new_groups(["a","b","c","d","e"])[0].length == 5       #returns true if len
 
 
 # 5. Reflection
-
-
-''
-array = ["a", "b", "c", "d", "e","f","g", "h", "i", "k"]
-puts new_groups(array).inspect
+# I first tried to solve it by myself, but then I paired with others on this problem,
+#  and I think we came up with a much better solution. It was much easier to catch mistakes and come up with solutions.

@@ -89,4 +89,9 @@ def mode(array)
   result = frequency.each_with_object([]) { |arr, new_arr| new_arr << arr[0] if arr[1] == max_value }
 end
 
-puts mode([4, 4, 5, 5, 6, 6, 6, 7, 5])
+# Reflections
+# This was really interesting challenge, I have solved and re-factored it , but I think it still not a  really good solution,
+#  will try to re-factor more in the future. I also found out about new method #each_with_object : http://www.ruby-doc.org/core-2.1.1/Enumerable.html#method-i-reduce
+
+# UPDATE
+# I re-factored to the point where I'm happy with it, I can go to sleep now.

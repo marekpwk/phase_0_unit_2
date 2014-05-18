@@ -87,8 +87,7 @@ p my_array_deletion_method(i_want_pets, "a") == ["I", 4, "pets", "but", "I", "on
 p my_hash_deletion_method(my_family_pets_ages, "George") == {"Evi" => 8, "Hoobie" => 5, "Bogart" => 6, "Poly" => 6, "Annabelle" => 2, "Ditto" => 5}
 
 # Reflect!
-#
-#
-#
-#
-#
+# While researching  this assignment, I decided to use just Ruby documentation, and no other Internet research. I browsed through Array,
+# Hash and Enumerable methods and it probably took much longer than just simply googling  them,
+# but along the way I got familiar with many other methods. Although I don't remember most of it,
+# I still think it was beneficial to me and I will go through documentation first, and then search the Internet for help.
