@@ -60,4 +60,5 @@ puts die.sides == 6
 puts (1..6).include?(die.roll)
 Die.new(0) rescue puts $!.message == "ArgumentError"
 
+
 # Reflections
