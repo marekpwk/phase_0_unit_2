@@ -77,62 +77,62 @@ end
 
 
 
-# # Driver Code:
-p north_korean_cipher("m^aerx%e&gsoi!") == "i want a coke!" #This is driver code and should print true
-# Find out what Kim Jong Un is saying below and turn it into driver code as well. Driver Code statements should always return "true"
-p north_korean_cipher("syv@tistpi$iex#xli*qswx*hipmgmsyw*erh*ryxvmxmsyw%jsshw^jvsq^syv#1000000#tvsjmxefpi$jevqw.") == "our people eat the most delicious and nutritious foods from our 10000 profitable farms."
-p north_korean_cipher("syv%ryoiw#evi#liph^xskixliv@fc^kveti-jpezsvih@xsjjii.*hsr'x%xipp&xli#yw!") == "our nukes are held together by grape-flavored toffee. don't tell the us!"
-p north_korean_cipher("mj^csy&qeoi^sri*qmwxeoi,%kir.*vm@csrk-kmp,&csy^ampp*fi&vitpegih*fc@hirrmw&vshqer.") == "if you make one mistake, gen. ri yong-gil, you will be replaced by dennis rodman."
-p north_korean_cipher("ribx^wxst:$wsyxl%osvie,$xlir$neter,#xlir%xli%asvph!") == "next stop: south korea, then japan, then the world!"
+# # # Driver Code:
+# p north_korean_cipher("m^aerx%e&gsoi!") == "i want a coke!" #This is driver code and should print true
+# # Find out what Kim Jong Un is saying below and turn it into driver code as well. Driver Code statements should always return "true"
+# p north_korean_cipher("syv@tistpi$iex#xli*qswx*hipmgmsyw*erh*ryxvmxmsyw%jsshw^jvsq^syv#1000000#tvsjmxefpi$jevqw.") == "our people eat the most delicious and nutritious foods from our 10000 profitable farms."
+# p north_korean_cipher("syv%ryoiw#evi#liph^xskixliv@fc^kveti-jpezsvih@xsjjii.*hsr'x%xipp&xli#yw!") == "our nukes are held together by grape-flavored toffee. don't tell the us!"
+# p north_korean_cipher("mj^csy&qeoi^sri*qmwxeoi,%kir.*vm@csrk-kmp,&csy^ampp*fi&vitpegih*fc@hirrmw&vshqer.") == "if you make one mistake, gen. ri yong-gil, you will be replaced by dennis rodman."
+# p north_korean_cipher("ribx^wxst:$wsyxl%osvie,$xlir$neter,#xlir%xli%asvph!") == "next stop: south korea, then japan, then the world!"
 
-p north_korean_cipher("ger^wsqifshc*nywx^kix^qi&10000*fekw@sj$gssp%vergl@hsvmxsw?") == "can somebody just get me 100 bags of cool ranch doritos?"
+# p north_korean_cipher("ger^wsqifshc*nywx^kix^qi&10000*fekw@sj$gssp%vergl@hsvmxsw?") == "can somebody just get me 100 bags of cool ranch doritos?"
 
 
-# Your Refactored Solution
+# # Your Refactored Solution
 
-def shift_letter(number, letter)
-  alphabet = ("a".."z").to_a
-  if alphabet.index(letter).between?(0,3)
-    return alphabet[alphabet.index(letter)+(26-number)]
-  else
-    return alphabet[alphabet.index(letter)-number]
-  end
-end
+# def shift_letter(number, letter)
+#   alphabet = ("a".."z").to_a
+#   if alphabet.index(letter).between?(0,3)
+#     return alphabet[alphabet.index(letter)+(26-number)]
+#   else
+#     return alphabet[alphabet.index(letter)-number]
+#   end
+# end
 
-def north_korean_cipher(coded_message)
-  input = coded_message.downcase.split("") # Turning every letter into a lower case letter and then splitting it into array
-  decoded_sentence = []
-  input.each do |x| # iterating over each input character
-    found_match = false  #when false the same character will be added to the solution
-    if ("a".."z").include?(x) #if current character is equal to a hash key
-      letter = shift_letter(4,x)
-      decoded_sentence << letter
-      found_match = true
-    elsif x.match(/[\@\#\$\%\^\&\*]/)
-      decoded_sentence << " "
-      found_match = true
-    end
-    if not found_match  #If there is no match then add the character to the solution
-      decoded_sentence << x
-    end
-  end
-  decoded_sentence = decoded_sentence.join("")
+# def north_korean_cipher(coded_message)
+#   input = coded_message.downcase.split("") # Turning every letter into a lower case letter and then splitting it into array
+#   decoded_sentence = []
+#   input.each do |x| # iterating over each input character
+#     found_match = false  #when false the same character will be added to the solution
+#     if ("a".."z").include?(x) #if current character is equal to a hash key
+#       letter = shift_letter(4,x)
+#       decoded_sentence << letter
+#       found_match = true
+#     elsif x.match(/[\@\#\$\%\^\&\*]/)
+#       decoded_sentence << " "
+#       found_match = true
+#     end
+#     if not found_match  #If there is no match then add the character to the solution
+#       decoded_sentence << x
+#     end
+#   end
+#   decoded_sentence = decoded_sentence.join("")
 
-    decoded_sentence.gsub!(/\d+/) { |num| num.to_i / 100 } #Replace and divide by 100
+#     decoded_sentence.gsub!(/\d+/) { |num| num.to_i / 100 } #Replace and divide by 100
 
-  return decoded_sentence # it sreturning the string
-end
+#   return decoded_sentence # it sreturning the string
+# end
 
 
 # Driver Code:
-p north_korean_cipher("m^aerx%e&gsoi!") == "i want a coke!"
+# p north_korean_cipher("m^aerx%e&gsoi!") == "i want a coke!"
 # Find out what Kim Jong Un is saying below and turn it into driver code as well. Driver Code statements should always return "true"
 p north_korean_cipher("syv@tistpi$iex#xli*qswx*hipmgmsyw*erh*ryxvmxmsyw%jsshw^jvsq^syv#1000000#tvsjmxefpi$jevqw.")# == "our people eat the most delicious and nutritious foods from our 10000 profitable farms."
-p north_korean_cipher("syv%ryoiw#evi#liph^xskixliv@fc^kveti-jpezsvih@xsjjii.*hsr'x%xipp&xli#yw!") == "our nukes are held together by grape-flavored toffee. don't tell the us!"
-p north_korean_cipher("mj^csy&qeoi^sri*qmwxeoi,%kir.*vm@csrk-kmp,&csy^ampp*fi&vitpegih*fc@hirrmw&vshqer.") == "if you make one mistake, gen. ri yong-gil, you will be replaced by dennis rodman."
-p north_korean_cipher("ribx^wxst:$wsyxl%osvie,$xlir$neter,#xlir%xli%asvph!") == "next stop: south korea, then japan, then the world!"
+# p north_korean_cipher("syv%ryoiw#evi#liph^xskixliv@fc^kveti-jpezsvih@xsjjii.*hsr'x%xipp&xli#yw!") == "our nukes are held together by grape-flavored toffee. don't tell the us!"
+# p north_korean_cipher("mj^csy&qeoi^sri*qmwxeoi,%kir.*vm@csrk-kmp,&csy^ampp*fi&vitpegih*fc@hirrmw&vshqer.") == "if you make one mistake, gen. ri yong-gil, you will be replaced by dennis rodman."
+# p north_korean_cipher("ribx^wxst:$wsyxl%osvie,$xlir$neter,#xlir%xli%asvph!") == "next stop: south korea, then japan, then the world!"
 
-p north_korean_cipher("ger^wsqifshc*nywx^kix^qi&10000*fekw@sj$gssp%vergl@hsvmxsw?") == "can somebody just get me 100 bags of cool ranch doritos?"
+# p north_korean_cipher("ger^wsqifshc*nywx^kix^qi&10000*fekw@sj$gssp%vergl@hsvmxsw?") == "can somebody just get me 100 bags of cool ranch doritos?"
 
 
 # Reflections
@@ -140,3 +140,5 @@ p north_korean_cipher("ger^wsqifshc*nywx^kix^qi&10000*fekw@sj$gssp%vergl@hsvmxsw
 #  We came up with a couple of really good ideas, but the part I liked the best was refactoring .  We cleaned up the code ,
 #   made it more elegant and faster, and used Regular Expression, which I think is good to be familiar with.
 # While I reviewed the code of others , I found one solution, which was using #zip method , which I never used before. I saw it in documentation , but I never bothered to read more about it, which obviously was a mistake.
+# UPDATE
+# I also paired again for this challenge with Adrian and Isaac

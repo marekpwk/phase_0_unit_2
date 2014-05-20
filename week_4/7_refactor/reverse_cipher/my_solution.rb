@@ -5,16 +5,16 @@
 
 
 # 1. Solution
-# Write your comments on what each thing is doing. 
+# Write your comments on what each thing is doing.
 # If you have difficulty, go into IRB and play with the methods.
 # Also make sure each step is necessary. If you don't think it's necessary
-# Try implementing the code without it. 
+# Try implementing the code without it.
 
 def translate_to_cipher(sentence)
     alphabet = ('a'..'z').to_a
     cipher = Hash[alphabet.zip(alphabet.rotate(4))]
     spaces = ["@", "#", "$", "%", "^", "&", "*"]
-    
+
     original_sentence = sentence.downcase
     encoded_sentence = []
     original_sentence.each_char do |element|
@@ -22,11 +22,11 @@ def translate_to_cipher(sentence)
         encoded_sentence << cipher[element]
       elsif element == ' '
         encoded_sentence << spaces.sample
-      else 
+      else
         encoded_sentence << element
       end
      end
-    
+
     return encoded_sentence.join
 end
 
@@ -53,5 +53,5 @@ p translate_to_cipher("I want cookies")
 
 
 
-# 5. Reflection 
+# 5. Reflection
 
