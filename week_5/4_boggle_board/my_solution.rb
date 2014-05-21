@@ -21,16 +21,20 @@ boggle_board = [["b", "r", "a", "e"],
 # DRIVER TESTS GO BELOW THIS LINE
 
 
-# Reflection 
+# Reflection
 
 #-------------------------------------------------------------------------------
 
-# Part 2: Write a method that takes a row number and returns all the elements in the row.  
+# Part 2: Write a method that takes a row number and returns all the elements in the row.
 
 # Pseudocode
 
 # Initial Solution
+def get_row(row,board)
+  board[row]
+end
 
+# puts get_row(1, boggle_board)
 
 # Refactored Solution
 
@@ -38,7 +42,7 @@ boggle_board = [["b", "r", "a", "e"],
 # DRIVER TESTS GO BELOW THIS LINE
 
 
-# Reflection 
+# Reflection
 
 
 
@@ -49,12 +53,14 @@ boggle_board = [["b", "r", "a", "e"],
 # Pseudocode
 
 # Initial Solution
-
+def get_column(column,board)
+  board.collect {|num| num[column]}.inspect
+end
 
 # Refactored Solution
 
 
 # DRIVER TESTS GO BELOW THIS LINE
+puts get_column(0,boggle_board)
 
-
-# Reflection 
+# Reflection
