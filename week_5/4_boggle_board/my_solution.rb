@@ -13,7 +13,9 @@ boggle_board = [["b", "r", "a", "e"],
 # Pseudocode
 
 # Initial Solution
-
+def create_word(board, *coords)
+    coords.map { |coord| board[coord.first][coord.last]}.join("")
+end
 
 # Refactored Solution
 
@@ -28,18 +30,24 @@ boggle_board = [["b", "r", "a", "e"],
 # Part 2: Write a method that takes a row number and returns all the elements in the row.
 
 # Pseudocode
-
+#Get the the element at index row
 # Initial Solution
 def get_row(row,board)
   board[row]
 end
 
-# puts get_row(1, boggle_board)
+
 
 # Refactored Solution
-
+def get_row(row,board)
+  board[row] == nil ? false : board[row]
+end
 
 # DRIVER TESTS GO BELOW THIS LINE
+puts boggle_board[0] == get_row(0, boggle_board)
+puts boggle_board[1] == get_row(1, boggle_board)
+puts boggle_board[2] == get_row(2, boggle_board)
+puts get_row(5, boggle_board) == false
 
 
 # Reflection
@@ -51,16 +59,22 @@ end
 # Part 3: Now write a method that takes a column number and returns all the elements in the column.
 
 # Pseudocode
-
+#in every array get element at the same index and put it in a new array
 # Initial Solution
 def get_column(column,board)
   board.collect {|num| num[column]}.inspect
 end
 
 # Refactored Solution
-
+def get_column(column,board)
+   return false if board[column] == nil
+   the_column = board.collect { |num| num[column] }
+end
 
 # DRIVER TESTS GO BELOW THIS LINE
-puts get_column(0,boggle_board)
+puts %W{b i e t} == get_column(0, boggle_board)
+puts %W{r o c a} == get_column(1, boggle_board)
+puts %W{e t r e} == get_column(3, boggle_board)
+puts get_column(13, boggle_board) == false
 
 # Reflection
