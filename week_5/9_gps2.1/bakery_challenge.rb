@@ -100,19 +100,12 @@
 # end
 def bakery_num(num_of_people, fav_food)
   my_list = {"pie" => 8, "cake" => 6, "cookie" => 1}
-  pie_qty = 0
-  cake_qty = 0
-  cookie_qty = 0
-  # has_fave = false
   has_fave = my_list.has_key? fav_food
+  raise ArgumentError, "You can't make that food" if has_fave == false
 
-  if has_fave == false
-    raise ArgumentError.new("You can't make that food")
-  else
     fav_food_qty = my_list[fav_food]
     if num_of_people % fav_food_qty == 0
       num_of_food = num_of_people / fav_food_qty
-      num_of_people = 0
       return "You need to make #{num_of_food} #{fav_food}(s)."
     end
     # else num_of_people % fav_food_qty != 0
@@ -127,7 +120,7 @@ def bakery_num(num_of_people, fav_food)
       return "You need to make #{food_array[0]} pie(s), #{food_array[1]} cake(s), and #{food_array[2]} cookie(s)."
     end
   end
-end
+
 
 
 #-----------------------------------------------------------------------------------------------------
@@ -142,4 +135,4 @@ p bakery_num(130, "pie") == "You need to make 16 pie(s), 0 cake(s), and 2 cookie
 # p bakery_num(3, "apples") # this will raise an ArgumentError
 
 # You SHOULD change this driver code. Why? Because it doesn't make sense.
-p bakery_num(41, "cake") == "You need to make 5 pie(s), 0 cake(s), and 1 cookie(s)." # WHAAAAAT? I thought I said I wanted cake!
+p bakery_num(41, "cake") #== "You need to make 5 pie(s), 0 cake(s), and 1 cookie(s)." # WHAAAAAT? I thought I said I wanted cake!
