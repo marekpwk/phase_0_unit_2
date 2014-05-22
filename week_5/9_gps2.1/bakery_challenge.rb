@@ -103,8 +103,8 @@ def bakery_num(num_of_people, fav_food)
   pie_qty = 0
   cake_qty = 0
   cookie_qty = 0
-  has_fave = false
-  has_fave = true  if my_list.has_key? fav_food
+  # has_fave = false
+  has_fave = my_list.has_key? fav_food
 
   if has_fave == false
     raise ArgumentError.new("You can't make that food")
