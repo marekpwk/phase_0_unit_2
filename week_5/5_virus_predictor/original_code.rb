@@ -25,7 +25,7 @@ class VirusPredictor
   private  #Everything under has to be called within the class
 
   def predicted_deaths # Its gonna predict number of deaths based on population density by muliplying population by given factor, for each state
-   array  = [50,100,150,200].reverse
+   array  = [50, 100, 150, 200].reverse
    array.each do |end_of_range|
        if @population_density >= end_of_range
          number_of_deaths = ( @population * end_of_range / 500 )
@@ -44,7 +44,7 @@ class VirusPredictor
     array_two  = [0,50,100,150,200].reverse # use the same array as in predicted_deaths because we are using @population_density as our common variable again
     array_two.each do |end_of_range| # For each of the values in the Array_two we want to
     if @population_density >= end_of_range # check to see if the @population_density vsalue is greater than each of the values
-       speed -= 0.5 * end_of_range/50 # Every time the value of @population_density is greater than the value of the end_of_range, the speed of the
+       speed -= 0.5 * end_of_range / 50 # Every time the value of @population_density is greater than the value of the end_of_range, the speed of the
        break# so we dont add up all of the values of end_of_range and then substract
      end
    end
