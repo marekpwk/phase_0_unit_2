@@ -63,9 +63,8 @@ class CreditCard
   def check_card
     numbers_to_array = []
     @number.to_s.split("").reverse.each_with_index { |item, index| index % 2 == 0 ? numbers_to_array << [item.to_i] : numbers_to_array << [item.to_i * 2] }
-    numbers_to_array.map! { |item| item[0] > 9 ? item[0].to_s.split("") : item }.flatten!.map!{ |item| item.to_i }.inject(:+) % 10 == 0
+    numbers_to_array.map!{ |item| item[0] > 9 ? item[0].to_s.split("").map(&:to_i) : item }.flatten!.inject(:+) % 10 == 0
   end
-
 end
 
 
