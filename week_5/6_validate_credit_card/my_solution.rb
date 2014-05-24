@@ -54,9 +54,7 @@ end
 class CreditCard
 
   def initialize (number)
-    if number.to_s.length != 16
-      raise ArgumentError.new()
-    end
+    raise ArgumentError.new() if number.to_s.length != 16
     @number = number
   end
 
