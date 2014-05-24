@@ -43,8 +43,7 @@ end
 def bakery_num(num_of_people, fav_food)
   my_list = {"pie" => 8, "cake" => 6, "cookie" => 1}
   raise ArgumentError, "You can't make that food" if !my_list.has_key? fav_food
-  final_list = {}
-  my_list.each_key{|k| final_list[k] = 0}
+  final_list = Hash.new(0)
   final_list[fav_food] = num_of_people / my_list[fav_food]
   return "You need to make #{final_list[fav_food]} #{fav_food}(s)." if num_of_people % my_list[fav_food] == 0
   num_of_people = num_of_people % my_list[fav_food]
