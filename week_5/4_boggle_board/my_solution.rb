@@ -21,7 +21,7 @@ end
 
 
 # DRIVER TESTS GO BELOW THIS LINE
-
+puts create_word(boggle_board, [2,1], [1,1], [1,2], [0,3])
 
 # Reflection
 
