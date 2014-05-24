@@ -76,8 +76,9 @@ valid_number = 4563960122001999
 credit = CreditCard.new(valid_number)
 puts credit.check_card() == true
 
-
-
+invalid_number = 123
+CreditCard.new(invalid_number) rescue error_message = $!.message
+puts error_message == "ArgumentError"
 
 
 # 5. Reflection
