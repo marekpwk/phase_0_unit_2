@@ -53,6 +53,12 @@ class VirusPredictor
 
 end
 
+
+STATE_DATA.each do |key, value|
+  report = VirusPredictor.new(key, STATE_DATA[key][:population_density], STATE_DATA[key][:population], STATE_DATA[key][:region], STATE_DATA[key][:regional_spread])
+  report.virus_effects
+end
+
 #=======================================================================
 
 # DRIVER CODE
@@ -72,12 +78,15 @@ end
 # alaska.virus_effects
 
 
-STATE_DATA.each do |key, value|
-  report = VirusPredictor.new(key, STATE_DATA[key][:population_density], STATE_DATA[key][:population], STATE_DATA[key][:region], STATE_DATA[key][:regional_spread])
-  report.virus_effects
-end
 
 
+# Reflection
+# I paired for this challenge and at the beginning it looked liked we would finish pretty quickly.
+# My partner came up with a couple of great refactoring ideas...but then we got stuck. We had working solutions,
+# but the final output was slightly different than the original code and the debugging process.
+# We spent most of our session trying to find a bug, then we decided to take a break and schedule another session which helped.
+# During the second session, we finished pretty quickly. It turned out that we made mistakes in the order of looping through an array of ranges.
+# This exercise taught me how time consuming debugging can be and that it's good to take a break from the problem sometimes and come back with a fresh mind.
 
 
 
