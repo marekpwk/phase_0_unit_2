@@ -78,3 +78,6 @@ puts %W{e t r e} == get_column(3, boggle_board)
 puts get_column(13, boggle_board) == false
 
 # Reflection
+# In this challenge we learned how to access nested arrays, and saw some simple implementation .
+# At first I thought that there was nothing to refactor, but after re-reading the instructions a couple of times,
+# I understood that that methods should also return false if the given row or number is out of range.
