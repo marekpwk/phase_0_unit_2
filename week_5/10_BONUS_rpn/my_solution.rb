@@ -104,11 +104,6 @@ end
 
 
 
-
-
-
-
-
 # 1. DRIVER TESTS GO BELOW THIS LINE
 calc = RPNCalculator.new()
 puts calc.evaluate('70 10 4 + 5 * -') == 0

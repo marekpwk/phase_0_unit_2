@@ -62,3 +62,5 @@ Die.new(0) rescue puts $!.message == "ArgumentError"
 
 
 # Reflections
+# In this exercise I learned how to write Driver Test Code that checks for Argument Error.
+# I also discovered two Ruby classes, Exception and Kernel.
