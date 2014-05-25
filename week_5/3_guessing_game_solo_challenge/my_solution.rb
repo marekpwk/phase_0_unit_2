@@ -100,3 +100,7 @@ puts game.solved? == true
 
 
 # 5. Reflection
+# In this challenge I've struggled for 15 minutes, trying to find a bug which didn't allow to pass last 3 tests.
+#  I run the code many times and it was working how it suppose to, so I couldn't understand why my test aren't passing.
+#  At the end turned out that I misunderstood the assignment, and I was creating a random number to guess, which caused my tests failing.
+#   The lesson learnt is that , I have to pay more attention to reading my assignments.
