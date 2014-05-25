@@ -77,6 +77,9 @@ p bakery_num(41, "cake") == "You need to make 0 pie(s), 6 cake(s), and 5 cookie(
 
 
 #  Reflection
-
+# In this GPS session I had to work by myself, because my partner canceled at the last minute.
+# I had to understand and re-factor someone else's code. It was a pretty difficult challenge,
+# but my instructor did a great job of explaining every question and walking me through it.
+# I wasn't able to re-factor during my GPS session, but I kept in mind the hints from my instructor and I did it later.
 
 
