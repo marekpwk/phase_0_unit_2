@@ -82,3 +82,6 @@ puts error_message == "ArgumentError"
 
 
 # 5. Reflection
+# On this challenge I worked with a group.
+# It was very interesting, fun and a lot of brain storming with great ideas and different approaches.
+# This was also the first time we had to implement actual algorithms to into code.
