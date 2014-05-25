@@ -53,33 +53,58 @@ end
 
 
 # 4. Refactored Solution
+# class RPNCalculator
+
+#   def evaluate(expression)
+#     exp_array = expression.split(" ")
+#     return expression.to_i if exp_array.size == 1
+#     stack = []
+#     exp_array.each do |item|
+#       if item.match(/[0-9]/)
+#         stack.push(item)
+#       else
+#         values = stack.pop(2).map!{ |item| item.to_i}
+#         stack.push(math_operations(values[0], values[1], item))
+#       end
+#     end
+#     stack[0]
+#   end
+
+#   private
+#   def math_operations(a, b, operator)
+#     case operator
+#       when "+" then a + b
+#       when "-" then a - b
+#       when "*" then a * b
+#     end
+#   end
+
+# end
+
 class RPNCalculator
-  # Define your methods, here!
+
   def evaluate(expression)
     exp_array = expression.split(" ")
     return expression.to_i if exp_array.size == 1
     stack = []
     exp_array.each do |item|
       if item.match(/[0-9]/)
-        stack.push(item)
+        stack.push(item.to_i)
       else
-        values = stack.pop(2).map!{ |item| item.to_i}
-        stack.push(math_operations(values[0], values[1], item))
+        values = stack.pop(2)
+        stack.push(values[0].send(item, values[1]))
       end
     end
     stack[0]
   end
 
-  private
-  def math_operations(a, b, operator)
-    case operator
-      when "+" then a + b
-      when "-" then a - b
-      when "*" then a * b
-    end
-  end
-
 end
+
+
+
+
+
+
 
 
 
