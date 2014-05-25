@@ -39,7 +39,8 @@ end
 
 
 # 4. Refactored Solution
-
+# This assignment was based on the previous one.
+# The difference was, we had to refer to elements in an array, s defining the ".roll" method so that the random number was the index of the array.
 
 
 
