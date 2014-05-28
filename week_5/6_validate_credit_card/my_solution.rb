@@ -65,7 +65,19 @@ class CreditCard
   end
 end
 
+class CreditCard
 
+  def initialize (number)
+    raise ArgumentError.new() if number.to_s.length != 16
+    @number = number
+  end
+
+  def check_card
+    numbers_to_array = []
+    @number.to_s.split("").reverse.each_with_index { |item, index| index % 2 == 0 ? numbers_to_array << item : numbers_to_array << [item.to_i * 2].to_s }
+    numbers_to_array.join.split("").map!{|item| item.to_i}.inject(:+) % 10 == 0
+  end
+end
 
 # 1. DRIVER TESTS GO BELOW THIS LINE
 invalid_number = ("1"*16).to_i
