@@ -149,4 +149,3 @@ class BoggleBoardCheck < Test::Unit::TestCase
     assert_equal( "code", @boggle_board.create_word([2,1], [1,1], [1,2], [0,3]) )
   end
 end
-# puts boggle_board.get_diagonal(1,3) #== ["e", "d", "c", "t"]
