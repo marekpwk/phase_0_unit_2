@@ -1,7 +1,7 @@
 require 'test/unit'
 # U2.W6: Create a BoggleBoard Class
 
-# I worked on this challenge [by myself, with: Jeremy].
+# I worked on this challenge [with: Jeremy Wong].
 
 
 # 2. Pseudocode
