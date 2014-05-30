@@ -1,4 +1,4 @@
-# require 'test/unit'
+require 'test/unit'
 # U2.W6: Testing Assert Statements
 
 # I worked on this challenge [by myself, with: Angela Kosek, Isaac Keith].
@@ -59,35 +59,32 @@ CreditCard.new(invalid_number) rescue error_message = $!.message
 assert {error_message == "ArgumentError"}
 
 
-# assert_raise("ArgumentError") {
-#     # some code to trigger the error
-#     assert {CreditCard.new(invalid_number)}
-# }
-
-# class TestCreditCheck < Test::Unit::TestCase
-
-#   def test_to_short_number
-#     number = 123
-#     assert_raise (ArgumentError) {CreditCard.new(number)}
-#   end
-
-#   def test_to_long_number
-#     number = 45639601220019991
-#     assert_raise (ArgumentError) {CreditCard.new(number)}
-#   end
-
-#   def test_to_invalid_number
-#     number = ("1"*16).to_i
-#     assert_equal(false, CreditCard.new(number).check_card)
-#   end
-
-#   def test_valid_number
-#     number = 4563960122001999
-#     assert_equal(true, CreditCard.new(number).check_card)
-#   end
 
 
-# end
+class TestCreditCheck < Test::Unit::TestCase
+
+  def test_to_short_number
+    number = 123
+    assert_raise (ArgumentError) {CreditCard.new(number)}
+  end
+
+  def test_to_long_number
+    number = 45639601220019991
+    assert_raise (ArgumentError) {CreditCard.new(number)}
+  end
+
+  def test_to_invalid_number
+    number = ("1"*16).to_i
+    assert_equal(false, CreditCard.new(number).check_card)
+  end
+
+  def test_valid_number
+    number = 4563960122001999
+    assert_equal(true, CreditCard.new(number).check_card)
+  end
+
+
+end
 
 
 
