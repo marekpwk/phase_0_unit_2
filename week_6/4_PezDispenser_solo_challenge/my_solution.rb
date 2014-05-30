@@ -111,8 +111,3 @@ class BogglePezDispenser < Test::Unit::TestCase
 
 end
 
-# @flavors = %w(cherry chocolate cola grape lemon orange peppermint raspberry strawberry).shuffle
-#     @dispenser = PezDispenser.new(@flavors)
-#       @dispenser.add_pez("puprple")
-#  puts  @dispenser.all_pez.include?("purple")
-#  puts  @dispenser.all_pez.inspect
