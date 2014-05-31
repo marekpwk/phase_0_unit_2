@@ -78,7 +78,7 @@ end
 
 
 # 5. Reflection
-class BogglePezDispenser < Test::Unit::TestCase
+class TestBogglePezDispenser < Test::Unit::TestCase
 
   def setup
     flavors_array = %w(cherry chocolate cola grape lemon orange peppermint raspberry strawberry).shuffle
