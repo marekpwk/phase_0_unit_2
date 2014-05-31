@@ -127,3 +127,6 @@ class TestCar < Test::Unit::TestCase
 end
 
 # 5. Reflection
+# Most of the time in this challenge I spent time figuring out what tests I should write and how to write them.
+# Although it was a very time consuming task, it made writing actual classes much easier.
+# Each time I ran the tests, new errors or failures were coming up, and based on that I built my class.

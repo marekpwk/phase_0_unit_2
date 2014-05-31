@@ -151,3 +151,6 @@ assert {CreditCard.instance_method(:check_card).arity == 0}
 
 
 # Reflection
+# This challenge was interesting and difficult at the same time. We had to re-factor someone else's code,
+# which is really hard. First we had to figure out what to change, then how, then ask ourselves is it really better?
+# I think one of the important questions here was, should we re-factor piece by piece or just delete most of the code and start from scratch.

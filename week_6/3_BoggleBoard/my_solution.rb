@@ -149,3 +149,8 @@ class BoggleBoardCheck < Test::Unit::TestCase
     assert_equal( "code", @boggle_board.create_word([2,1], [1,1], [1,2], [0,3]) )
   end
 end
+
+# Reflections
+# I paired on this challenge and it was pretty straight forward. We already had most of the methods written last week,
+# so it was just moving them inside BoggleBoard class. The tricky part was writing the diagonal method,
+# which collects diagonal letters from right or left.  I also experimented a little bit more with Ruby testing unit and find it a very handy tool.

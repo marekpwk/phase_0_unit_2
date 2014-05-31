@@ -77,7 +77,6 @@ end
 
 
 
-# 5. Reflection
 class TestBogglePezDispenser < Test::Unit::TestCase
 
   def setup
@@ -111,3 +110,8 @@ class TestBogglePezDispenser < Test::Unit::TestCase
 
 end
 
+# Reflections
+
+# This challenge itself was pretty easy. The most time consuming part was writing the tests.
+# I decided to continue testing with “Test:Unit”, so it took me much longer than if I had written Driver Test Code,
+# but I think it was a good exercise.

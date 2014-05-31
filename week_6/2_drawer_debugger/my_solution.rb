@@ -129,3 +129,5 @@ assert{ knife.clean == false }
 
 
 # 5. Reflection
+# I've enjoyed this assignment, although at the same time had some problems at the beginning with understanding what the code does.
+# I added a method “clean” which just returns true or false depending on the silverware cleanliness .

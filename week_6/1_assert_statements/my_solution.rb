@@ -89,5 +89,7 @@ end
 
 
 # 5. Reflection
-
+# In this assignment  we tried assert to test our code. We decided to test our code from the “Validate credit card assignment“ .
+# The biggest problem we had was how to test with assert for “ArgumentError”. After some Internet research we discovered how to catch error name with rescue, put it into the variable,
+# and then use assert. We also started to experiment with a Ruby framework for testing called “Test:Unit”, which makes testing much easier.
 
